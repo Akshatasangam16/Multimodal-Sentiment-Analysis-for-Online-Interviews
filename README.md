@@ -16,13 +16,13 @@ Fusion of multiple data streams (audio, video, text) for accurate predictions.
 Achieved 93.1% accuracy in test datasets.
 Designed for HR departments, remote hiring platforms, and exam proctoring systems.
 
-👩‍💻 Your Role:
+Your Role:
 Integrated and synchronized all components (audio, video, NLP).
 Trained and fine-tuned CNN layers for emotion detection.
 Designed and implemented the fusion logic for decision-making.
 Built a user interface using Streamlit for easy interaction.
 
-📊 Technologies & Libraries:
+Technologies & Libraries:
 Whisper – Speech-to-text
 DistilBERT – Text sentiment analysis
 DeepFace, Haar Cascade, CNN – Facial emotion detection
