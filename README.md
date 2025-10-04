@@ -10,7 +10,7 @@ Text-based sentiment from the transcript using DistilBERT.
 Facial expressions and emotions through DeepFace, CNN layers, and Haar Cascades.
 Non-verbal cues like gaze direction, micro-expressions, and head movement using MediaPipe and OpenCV.
 
-🎯 Key Features:
+Key Features:
 Real-time detection of emotions, stress levels, and engagement.
 Fusion of multiple data streams (audio, video, text) for accurate predictions.
 Achieved 93.1% accuracy in test datasets.
@@ -24,13 +24,8 @@ Built a user interface using Streamlit for easy interaction.
 
 📊 Technologies & Libraries:
 Whisper – Speech-to-text
-
 DistilBERT – Text sentiment analysis
-
 DeepFace, Haar Cascade, CNN – Facial emotion detection
-
 MediaPipe, OpenCV – Non-verbal cue detection
-
 Streamlit – Web interface
-
 Torch, TensorFlow, Transformers, NLTK, TextBlob – AI/ML stack
