@@ -1,31 +1,46 @@
-📌 Project Title:
-Multimodal Sentiment Analysis for Online Interviews
+Multimodal Emotion Analysis System
+Streamlit App License: MIT Python
 
-Project Description:
-In the era of remote hiring and virtual interviews, maintaining fairness, integrity, and real-time evaluation of candidates has become a critical challenge. Our project presents a Multimodal Sentiment Analysis System that detects signs of cheating, stress, or dishonesty during online interviews by analyzing audio, video, and text data in parallel.
+This project is an advanced, interactive web application built with Streamlit that provides multimodal emotion analysis. It analyzes human emotion from uploaded videos or live webcam streams by integrating facial emotion recognition and speech sentiment analysis to offer a holistic and detailed view of emotional state and communication congruence.
 
-The system captures:
-Verbal cues via speech-to-text transcription using OpenAI's Whisper.
-Text-based sentiment from the transcript using DistilBERT.
-Facial expressions and emotions through DeepFace, CNN layers, and Haar Cascades.
-Non-verbal cues like gaze direction, micro-expressions, and head movement using MediaPipe and OpenCV.
+📁 Repository Contents
+File	Description
+final.py	The main Streamlit application script containing all logic and UI.
+haarcascade_frontalface_default.xml	OpenCV's pre-trained Haar Cascade file for robust facial detection.
+model_file_30epochs.zip	Archive containing the TensorFlow/Keras model (model_file_30epochs.h5) used for facial emotion classification. You must unzip this file before running the app.
+README.md	This documentation file.
+🚀 Key Features
+Multimodal Fusion: Integrates emotion data from both visual (face) and auditory (speech/text) channels.
+Comprehensive Video Analysis: Upload a video to get a detailed, frame-by-frame facial emotion distribution, Whisper transcription, DistilBERT speech emotion, and a final combined analytical report with recommendations.
+Real-time Webcam Streaming: Live emotion monitoring with on-screen bounding boxes, MediaPipe facial landmarks, and an updating emotion trend chart.
+Hybrid Face Detection: Supports both lightweight MediaPipe (for speed) and the heavy-duty DeepFace library (for robustness in video analysis).
+Emotion Analytics Dashboard: Visualizes historical emotion data from streaming sessions using interactive Plotly charts (pie charts, timeline, and emotion transition heatmaps).
+⚙️ Setup and Installation
+1. Prerequisites
+Python 3.8+
+A decent CPU (or GPU for optimal real-time performance).
+2. Prepare Model Files
+The primary Keras emotion model is in a zipped format to ease cloning:
 
-Key Features:
-Real-time detection of emotions, stress levels, and engagement.
-Fusion of multiple data streams (audio, video, text) for accurate predictions.
-Achieved 93.1% accuracy in test datasets.
-Designed for HR departments, remote hiring platforms, and exam proctoring systems.
+Unzip the file: Extract model_file_30epochs.zip.
+Ensure the extracted file, model_file_30epochs.h5, is placed in the root directory alongside final.py and haarcascade_frontalface_default.xml.
+3. Clone and Install Dependencies
+Clone the repository:
 
-Your Role:
-Integrated and synchronized all components (audio, video, NLP).
-Trained and fine-tuned CNN layers for emotion detection.
-Designed and implemented the fusion logic for decision-making.
-Built a user interface using Streamlit for easy interaction.
+git clone [https://github.com/your-username/emotion-analysis-system.git](https://github.com/your-username/emotion-analysis-system.git)
+cd emotion-analysis-system
+Install dependencies: The application relies on several heavyweight packages (tensorflow, mediapipe, whisper, deepface). Run the following command to install everything needed:
 
-Technologies & Libraries:
-Whisper – Speech-to-text
-DistilBERT – Text sentiment analysis
-DeepFace, Haar Cascade, CNN – Facial emotion detection
-MediaPipe, OpenCV – Non-verbal cue detection
-Streamlit – Web interface
-Torch, TensorFlow, Transformers, NLTK, TextBlob – AI/ML stack
+pip install streamlit opencv-python numpy mediapipe librosa plotly pandas Pillow whisper deepface tensorflow transformers moviepy scipy
+💻 Running the Application
+Execute the Streamlit application:
+
+streamlit run final.py
+Access: The application will automatically open in your web browser at http://localhost:8501.
+
+Navigate: Use the sidebar to switch between the four operational modes: Upload Video Analysis, Webcam Emotion Detection, Live Streaming Analysis, and Emotion Analytics Dashboard.
+
+⚠️ Important Notes
+Model Caching: The application uses Streamlit's resource caching to load all large models only once, ensuring quick restarts after the initial setup.
+Webcam Permissions: Ensure your browser and operating system grant access to your webcam for the real-time modes.
+Audio Extraction: The video analysis mode extracts audio using MoviePy; ensure your video file has a readable audio track.
