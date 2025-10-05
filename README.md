@@ -9,6 +9,7 @@ final.py	The main Streamlit application script containing all logic and UI.
 haarcascade_frontalface_default.xml	OpenCV's pre-trained Haar Cascade file for robust facial detection.
 model_file_30epochs.zip	Archive containing the TensorFlow/Keras model (model_file_30epochs.h5) used for facial emotion classification. You must unzip this file before running the app.
 README.md	This documentation file.
+
 🚀 Key Features
 Multimodal Fusion: Integrates emotion data from both visual (face) and auditory (speech/text) channels.
 Comprehensive Video Analysis: Upload a video to get a detailed, frame-by-frame facial emotion distribution, Whisper transcription, DistilBERT speech emotion, and a final combined analytical report with recommendations.
